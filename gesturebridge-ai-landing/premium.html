@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GestureBridge AI - Premium Features</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Inter:wght@400;700&family=Satoshi:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Urbanist', 'Inter', 'Satoshi', sans-serif;
+      background: linear-gradient(135deg, #0a0a23, #1a0a4a);
+      color: #f9f9f9;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px rgba(127, 0, 255, 0.4);
+      transition: box-shadow 0.3s ease;
+    }
+    .glass:hover {
+      box-shadow: 0 0 20px rgba(225, 0, 255, 0.7);
+    }
+    .locked {
+      filter: grayscale(100%) opacity(0.5);
+      cursor: not-allowed;
+      position: relative;
+    }
+    .tooltip {
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(127, 0, 255, 0.9);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+    }
+    .locked:hover .tooltip {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .neon-text {
+      color: #e100ff;
+      text-shadow:
+        0 0 5px #e100ff,
+        0 0 10px #e100ff,
+        0 0 20px #7f00ff,
+        0 0 30px #7f00ff;
+    }
+    /* Button animation */
+    .btn-premium {
+      background: linear-gradient(45deg, #7f00ff, #e100ff);
+      background-size: 200% 200%;
+      animation: gradientShift 3s ease infinite;
+      color: white;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 0 15px #e100ff;
+      transition: box-shadow 0.3s ease;
+    }
+    .btn-premium:hover {
+      box-shadow: 0 0 25px #ff00ff;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body class="relative flex flex-col min-h-screen">
+
+  <header class="bg-gradient-to-tr from-purple-900 to-purple-700 p-4 flex justify-between items-center">
+    <a href="index.html" class="text-white font-bold text-xl">GestureBridge AI</a>
+    <nav class="space-x-6 text-white">
+      <a href="index.html" class="hover:text-purple-300">Home</a>
+      <a href="live.html" class="hover:text-purple-300">Live</a>
+      <a href="pricing.html" class="hover:text-purple-300">Pricing</a>
+      <a href="auth.html" class="hover:text-purple-300">Login</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto p-6">
+    <h1 class="text-4xl font-extrabold neon-text mb-12 text-center">Premium Features</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="glass locked p-6 relative">
+        <h2 class="text-2xl font-semibold mb-2">Upload Gesture Video</h2>
+        <p>Analyze your recorded sign language videos with AI.</p>
+        <div class="tooltip">Upload videos to get detailed analysis and predictions.</div>
+      </div>
+      <div class="glass locked p-6 relative">
+        <h2 class="text-2xl font-semibold mb-2">Multilingual Voice</h2>
+        <p>Supports multiple languages for voice output.</p>
+        <div class="tooltip">Speak in English, Spanish, Urdu, and more.</div>
+      </div>
+      <div class="glass locked p-6 relative">
+        <h2 class="text-2xl font-semibold mb-2">AI Punctuation</h2>
+        <p>Automatically punctuate your translated sentences.</p>
+        <div class="tooltip">Enhance readability with AI-powered punctuation.</div>
+      </div>
+      <div class="glass locked p-6 relative">
+        <h2 class="text-2xl font-semibold mb-2">PDF/MP4 Export</h2>
+        <p>Export your translations as PDF or video files.</p>
+        <div class="tooltip">Save and share your translations easily.</div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="auth.html" class="btn-premium inline-block px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition">Unlock Premium Features</a>
+    </div>
+  </main>
+
+  <footer class="bg-gradient-to-tr from-purple-900 to-purple-700 text-white py-6 mt-16 text-center">
+    &copy; 2024 GestureBridge AI. All rights reserved.
+  </footer>
+
+</body>
+</html>
