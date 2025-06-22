@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GestureBridge AI - Live Translation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Inter:wght@400;700&family=Satoshi:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Urbanist', 'Inter', 'Satoshi', sans-serif;
+      background: linear-gradient(135deg, #0a0a23, #1a0a4a);
+      color: #f9f9f9;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px rgba(127, 0, 255, 0.4);
+      transition: box-shadow 0.3s ease;
+    }
+    .glass:hover {
+      box-shadow: 0 0 20px rgba(225, 0, 255, 0.7);
+    }
+  </style>
+</head>
+<body class="relative flex flex-col min-h-screen">
+
+  <header class="bg-gradient-to-tr from-purple-900 to-purple-700 p-4 flex justify-between items-center">
+    <a href="index.html" class="text-white font-bold text-xl">GestureBridge AI</a>
+    <nav class="space-x-6 text-white">
+      <a href="index.html" class="hover:text-purple-300">Home</a>
+      <a href="premium.html" class="hover:text-purple-300">Premium</a>
+      <a href="pricing.html" class="hover:text-purple-300">Pricing</a>
+      <a href="auth.html" class="hover:text-purple-300">Login</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Left: Live webcam feed -->
+    <section class="glass p-4 rounded-lg flex flex-col items-center">
+      <h2 class="text-2xl font-bold mb-4 neon-text">Live Webcam Feed</h2>
+      <video id="webcam" autoplay playsinline muted class="rounded-lg w-full max-w-md border border-purple-600"></video>
+      <p class="mt-2 text-sm text-purple-300">Make your gestures in front of the webcam.</p>
+    </section>
+
+    <!-- Right: Detected letters, sentence output, buttons -->
+    <section class="glass p-4 rounded-lg flex flex-col">
+      <h2 class="text-2xl font-bold mb-4 neon-text">Detected Letters</h2>
+      <div id="detected-letters" class="flex flex-wrap gap-2 mb-4 min-h-[3rem] bg-purple-900 rounded p-2 text-white"></div>
+
+      <h2 class="text-2xl font-bold mb-4 neon-text">Sentence Output</h2>
+      <textarea id="sentence-output" rows="5" class="w-full p-2 rounded bg-purple-900 text-white resize-none" readonly></textarea>
+
+      <div class="mt-4 flex gap-4 justify-center">
+        <button id="speak-btn" class="glass px-6 py-2 rounded font-semibold hover:bg-purple-700 transition">🔊 Speak</button>
+        <button id="save-btn" class="glass px-6 py-2 rounded font-semibold hover:bg-purple-700 transition">💾 Save</button>
+        <button id="clear-btn" class="glass px-6 py-2 rounded font-semibold hover:bg-purple-700 transition">♻️ Clear</button>
+      </div>
+
+      <div class="mt-6 flex justify-between items-center">
+        <label for="theme-toggle" class="text-purple-300">Dark/Light Mode</label>
+        <input type="checkbox" id="theme-toggle" class="toggle-checkbox" />
+      </div>
+    </section>
+  </main>
+
+  <script src="js/webcam.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/api.js"></script>
+
+</body>
+</html>
