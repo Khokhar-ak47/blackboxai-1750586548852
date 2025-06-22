@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Robinhood Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom colors */
+    :root {
+      --neon-green: #d0ff00;
+      --black-bg: #000000;
+      --dark-bg: #111111;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--black-bg);
+      color: white;
+    }
+    a {
+      color: var(--neon-green);
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #a0cc00;
+    }
+    .btn-neon {
+      background-color: var(--neon-green);
+      color: black;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      border-radius: 9999px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-neon:hover {
+      background-color: #a0cc00;
+    }
+    .btn-dark {
+      background-color: #111111;
+      color: white;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      border-radius: 9999px;
+      border: 1px solid white;
+      transition: background-color 0.3s ease;
+    }
+    .btn-dark:hover {
+      background-color: #222222;
+    }
+    .link-button {
+      border: 1px solid white;
+      border-radius: 9999px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      color: white;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      text-align: center;
+    }
+    .link-button:hover {
+      background-color: #222222;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Top banner -->
+  <div class="bg-neon-green text-black text-center py-2 text-sm font-semibold" style="background-color: var(--neon-green);">
+    It’s Crypto Season. Unlock limited-time offers in your app. <a href="https://applink.robinhood.com/microgram_launch?id=app-crypto-event-hub&deeplink=robinhood%3A%2F%2Fapp-crypto-event-hub" class="underline">Learn more</a>
+  </div>
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+    <div class="flex items-center space-x-6">
+      <a href="#" class="text-white font-bold text-xl">Robinhood</a>
+      <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+        <div class="group relative">
+          <button class="hover:text-neon-green">What We Offer</button>
+          <!-- Dropdown could be added here -->
+        </div>
+        <a href="#" class="hover:text-neon-green">Strategies</a>
+        <a href="#" class="hover:text-neon-green">Gold</a>
+        <a href="#" class="hover:text-neon-green">Legend</a>
+        <a href="#" class="hover:text-neon-green">Learn</a>
+        <a href="#" class="hover:text-neon-green">Support</a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4">
+      <button class="text-white hover:text-neon-green text-sm font-semibold">🌐 US</button>
+      <button class="btn-dark">Log In</button>
+      <button class="btn-neon">Sign up</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-black max-w-7xl mx-auto px-6 py-12 md:py-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <img src="https://images.ctfassets.net/ilblxxee70tt/TbWWywDsGWHx8L8AmpWo8/b8ef060eeb8c1965f9df32ce9be9dd18/1280x900-CryptoEvent-HPTO.jpg" alt="Robinhood Presents - To Catch a Token" class="mx-auto rounded-lg mb-8" />
+      <p class="text-white text-lg mb-2">Tune into the livestream where a global plan is unfolding in the shadows of tradition.</p>
+      <a href="https://go.robinhood.com/presents" class="underline text-neon-green font-semibold mb-2 inline-block">Learn more</a>
+      <p class="text-white mb-4">June 30, 2025 at 5 PM CEST · 11 AM ET</p>
+      <a href="http://rbnhd.co/RobinhoodPresents" class="btn-dark inline-block">Remind me</a>
+    </div>
+  </section>
+
+  <!-- Intuitive trading tools section -->
+  <section class="bg-black max-w-7xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-neon-green text-4xl font-bold mb-4">Intuitive trading tools</h2>
+    <p class="text-white text-xl mb-6 max-w-xl mx-auto">Build your strategy and track market trends, seamlessly</p>
+    <p class="text-white mb-6">Trade stocks, options, crypto, and more on Robinhood Legend and the Robinhood app.</p>
+    <a href="https://robinhood.com/us/en/about/trading/" class="btn-neon inline-block">Learn more</a>
+    <p class="text-gray-400 text-xs mt-8 max-w-md mx-auto">Stocks &amp; funds offered through Robinhood Financial. Crypto offered through Robinhood Crypto. See our <a href="https://cdn.robinhood.com/assets/robinhood/legal/RHF%20Fee%20Schedule.pdf" class="underline text-neon-green">Fee Schedule</a> for more details.</p>
+  </section>
+
+  <!-- Robinhood Crypto Section -->
+  <section class="bg-white text-black max-w-7xl mx-auto px-6 py-20 text-center">
+    <img src="https://images.ctfassets.net/ilblxxee70tt/1yBfcc0Y35v8vHS6eUXWMR/5ba2fd65e0cc48044084099e57625f94/web_crypto_hero.jpg" alt="Robinhood Crypto" class="mx-auto mb-8 rounded-lg max-w-full" />
+    <h2 class="text-4xl font-bold mb-4">Get started with Robinhood Crypto<br />Trade crypto 24/7</h2>
+    <p class="mb-6 max-w-lg mx-auto">Start with as little as $1. Buy, sell, and transfer BTC, ETH, XRP, SOL, DOGE, SHIB, and more.</p>
+    <p class="text-xs text-gray-600 mb-6 flex items-center justify-center space-x-2 max-w-xs mx-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01" />
+      </svg>
+      <span>Crypto Risk Disclosures</span>
+    </p>
+    <a href="https://robinhood.com/us/en/about/crypto/" class="btn-dark inline-block">Learn more</a>
+    <p class="text-xs text-gray-600 mt-6 max-w-md mx-auto">Crypto offered through Robinhood Crypto.</p>
+  </section>
+
+  <!-- Robinhood Strategies Section -->
+  <section class="bg-black max-w-7xl mx-auto px-6 py-20 text-center">
+    <img src="https://images.ctfassets.net/ilblxxee70tt/2IeGSELP82mOWLNZHSE5R5/2dd98fffc51573df6d68de384a175435/RH25_Strategiespromo_wide_homepage_hero.jpeg" alt="Your portfolio, handled by the pros" class="mx-auto mb-8 rounded-lg max-w-full" />
+    <h2 class="text-4xl font-bold mb-4">Your portfolio, handled by the pros</h2>
+    <p class="text-white max-w-lg mx-auto mb-6">
+      Get timely market insights with an expert-managed portfolio that proactively adjusts your investments. Robinhood Gold members get zero management fees on every dollar over $100K.
+    </p>
+    <p class="text-white mb-6">Terms apply. Gold subscription $5/month.</p>
+    <a href="https://robinhood.com/us/en/strategies" class="btn-neon inline-block">Get started</a>
+    <p class="text-gray-400 text-xs mt-8 max-w-md mx-auto">
+      For illustrative purposes only. Portfolio management offered through Robinhood Asset Management (“Robinhood Strategies”), an SEC-registered investment advisor. Gold membership is offered by Robinhood Gold, LLC.
+    </p>
+  </section>
+
+  <!-- Robinhood Protection Guarantee Section -->
+  <section class="bg-black max-w-7xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl font-semibold mb-6">Robinhood Protection Guarantee</h2>
+    <a href="https://robinhood.com/us/en/our-commitments/" class="link-button inline-block mb-12">Learn more about our commitments</a>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto text-white text-sm">
+      <div>
+        <img src="https://images.ctfassets.net/ilblxxee70tt/4eSlnvgaWAu2jaCVAyRcrY/602aa63fb17d4448ef651bd2944e963a/illo_secure.svg" alt="We work hard to keep your data safe and secure." class="mx-auto mb-2" />
+        <p>We work hard to keep your data safe and secure.</p>
+      </div>
+      <div>
+        <img src="https://images.ctfassets.net/ilblxxee70tt/DwoUYJLid0EWhDOJPjFYN/673186170fb52deebdfaeb3691a28cac/illo_protect.svg" alt="We protect your account from unauthorized activity." class="mx-auto mb-2" />
+        <p>We protect your account from unauthorized activity.</p>
+      </div>
+      <div>
+        <img src="https://images.ctfassets.net/ilblxxee70tt/2KMkk3plAKjRG2fPBI69a1/18a5f48bbf278bc91008f6904096b559/illo_multi-factor.svg" alt="We provide multi-factor authentication on all accounts." class="mx-auto mb-2" />
+        <p>We provide multi-factor authentication on all accounts.</p>
+      </div>
+      <div>
+        <img src="https://images.ctfassets.net/ilblxxee70tt/4u2J3HEANe8rXfdytWGpAC/72bd780bca181f59b40dcf8c51f0e996/illo_247.svg" alt="We've got your back. We're available to you 24/7." class="mx-auto mb-2" />
+        <p>We've got your back. We're available to you 24/7.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Become a better investor Section -->
+  <section class="bg-neon-green text-black text-center py-20 px-6">
+    <h2 class="text-4xl font-bold mb-4 max-w-3xl mx-auto">Become a better investor on the go, right in the app</h2>
+    <p class="mb-8 max-w-xl mx-auto">Here's a preview of the things you can learn when you sign up.</p>
+    <a href="https://robinhood.com/signup" class="btn-dark inline-block">Sign up to access Robinhood Learn</a>
+    <div class="mt-12">
+      <img src="https://images.ctfassets.net/ilblxxee70tt/PKdx5QPF2hxl9vcbxm55W/b1942354f732fbb69a019c53c73bf46b/homepage_learn_phone_2x.png" alt="phone" class="mx-auto max-w-xs" />
+    </div>
+  </section>
+
+  <!-- Join a new generation Section -->
+  <section class="bg-black text-white text-center py-20 px-6">
+    <h2 class="text-4xl font-serif font-semibold mb-8 max-w-3xl mx-auto">Join a new generation of investors</h2>
+    <a href="https://robinhood.com/signup" class="btn-neon inline-block">Sign up</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-neon-green text-black text-sm px-6 py-12 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between mb-8">
+      <div class="mb-6 md:mb-0">
+        <p>Customer Relationship Summaries</p>
+        <p>FINRA’s BrokerCheck</p>
+      </div>
+      <div class="flex space-x-4">
+        <a href="#" aria-label="Follow us on X">X</a>
+        <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+        <a href="#" aria-label="Follow us on LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Follow us on TikTok">TikTok</a>
+        <a href="#" aria-label="Follow us on YouTube">YouTube</a>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="font-semibold mb-2">Product</h3>
+        <ul class="space-y-1">
+          <li><a href="#" class="underline">Invest</a></li>
+          <li><a href="#" class="underline">Strategies</a></li>
+          <li><a href="#" class="underline">Trading</a></li>
+          <li><a href="#" class="underline">Retirement</a></li>
+          <li><a href="#" class="underline">Gold</a></li>
+          <li><a href="#" class="underline">Crypto</a></li>
+          <li><a href="#" class="underline">Legend</a></li>
+          <li><a href="#" class="underline">Options</a></li>
+          <li><a href="#" class="underline">Futures</a></li>
+          <li><a href="#" class="underline">Banking</a></li>
+          <li><a href="#" class="underline">Credit Card</a></li>
+          <li><a href="#" class="underline">Learn</a></li>
+          <li><a href="#" class="underline">Snacks</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Company</h3>
+        <ul class="space-y-1">
+          <li><a href="#" class="underline">About us</a></li>
+          <li><a href="#" class="underline">Blog</a></li>
+          <li><a href="#" class="underline">Partner With Us</a></li>
+          <li><a href="#" class="underline">Affiliates</a></li>
+          <li><a href="#" class="underline">Press</a></li>
+          <li><a href="#" class="underline">Careers</a></li>
+          <li><a href="#" class="underline">Commitments</a></li>
+          <li><a href="#" class="underline">Investor Relations</a></li>
+          <li><a href="#" class="underline">Support</a></li>
+          <li><a href="#" class="underline">ESG</a></li>
+          <li><a href="#" class="underline">Investor Index</a></li>
+          <li><a href="#" class="underline">Robinhood Merch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Legal & Regulatory</h3>
+        <ul class="space-y-1">
+          <li><a href="#" class="underline">Terms & Conditions</a></li>
+          <li><a href="#" class="underline">Disclosures</a></li>
+          <li><a href="#" class="underline">Robinhood Financial Entities US Online Privacy Statement</a></li>
+          <li><a href="#" class="underline">Robinhood Markets US Online Privacy Statement</a></li>
+          <li><a href="#" class="underline">Law Enforcement Requests</a></li>
+          <li><a href="#" class="underline">Your Privacy Choices</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">All investing involves risk.</h3>
+        <p class="text-xs leading-tight">
+          Brokerage services are offered through Robinhood Financial LLC, (“RHF”) a registered broker dealer (member SIPC), and clearing services through Robinhood Securities, LLC, (“RHS”) a registered broker dealer (member SIPC).<br /><br />
+          Portfolio Management offered through Robinhood Asset Management (“Robinhood Strategies” or “RAM”), an SEC-registered investment advisor. For additional information about Robinhood Strategies, including about services, fees, risks, and conflicts of interest, please see our <a href="#" class="underline">firm’s brochure</a>.<br /><br />
+          Futures and cleared swaps trading is offered by Robinhood Derivatives, LLC, (“RHD”) a registered futures commission merchant with the Commodity Futures Trading Commission (CFTC) and a Member of the National Futures Association (NFA). RHD is not FDIC insured or SIPC protected.<br /><br />
+          Cryptocurrency services are offered through an account with Robinhood Crypto, LLC (“RHC”) (NMLS ID: 1702840). Robinhood Crypto is licensed to engage in virtual currency business activity by the New York State Department of Financial Services. Review a list of <a href="#" class="underline">RHC’s licenses</a> for more information. Cryptocurrency held through Robinhood Crypto is not FDIC insured or SIPC protected.<br /><br />
+          The Robinhood spending account is offered through Robinhood Money, LLC (“RHY”) (NMLS ID: 1990968), a licensed money transmitter. Review a <a href="#" class="underline">list of our licenses</a> for more information.<br /><br />
+          The Robinhood Cash Card is a prepaid card issued by Sutton Bank, Member FDIC, pursuant to a license from Mastercard® International Incorporated. Mastercard and the circles design are registered trademarks of Mastercard International Incorporated.<br /><br />
+          Robinhood Gold Card is subject to credit approval and underwriting. Robinhood Gold Card is offered by Robinhood Credit, Inc., and is issued by Coastal Community Bank, pursuant to a license from Visa U.S.A. Inc. Robinhood Credit, Inc. (“RCT”), is a financial technology company, not a bank.<br /><br />
+          Robinhood Gold is a subscription-based membership program of premium services offered through Robinhood Gold, LLC (“RHG”). RHF, RAM, RHY, RHC, RCT, RHG, RHD, and RHS are affiliated entities and wholly owned subsidiaries of Robinhood Markets, Inc. RHF, RAM, RHY, RHC, RCT, RHG, RHD, and RHS are not banks. Investing products offered by RHF are not FDIC insured and involve risk, including possible loss of principal. RHY is not a member of FINRA, and products are not subject to SIPC protection, but funds held in the Robinhood spending account and Robinhood Cash Card account may be eligible for FDIC pass-through insurance (review the Robinhood Cash Card Agreement and the Robinhood Spending Account Agreement).<br /><br />
+          Options trading entails significant risk and is not appropriate for all customers. Customers must read and understand the <a href="#" class="underline">Characteristics and Risks of Standardized Options</a> before engaging in any options trading strategies. Options transactions are often complex and may involve the potential of losing the entire investment in a relatively short period of time. Certain complex options strategies carry additional risk, including the potential for losses that may exceed the original investment amount.<br /><br />
+          R0 4340406<br /><br />
+          Robinhood, 85 Willow Road, Menlo Park, CA 94025. © 2025 Robinhood. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
