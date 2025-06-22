@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GestureBridge AI - Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Inter:wght@400;700&family=Satoshi:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Urbanist', 'Inter', 'Satoshi', sans-serif;
+      background: linear-gradient(135deg, #0a0a23, #1a0a4a);
+      color: #f9f9f9;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px rgba(127, 0, 255, 0.4);
+      transition: box-shadow 0.3s ease;
+    }
+    .glass:hover {
+      box-shadow: 0 0 20px rgba(225, 0, 255, 0.7);
+    }
+    .btn-subscribe {
+      background: linear-gradient(45deg, #7f00ff, #e100ff);
+      background-size: 200% 200%;
+      animation: gradientShift 3s ease infinite;
+      color: white;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 0 15px #e100ff;
+      transition: box-shadow 0.3s ease;
+      display: inline-block;
+      text-align: center;
+    }
+    .btn-subscribe:hover {
+      box-shadow: 0 0 25px #ff00ff;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    th, td {
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 1rem;
+      text-align: center;
+    }
+    th {
+      background: rgba(127,0,255,0.3);
+    }
+  </style>
+</head>
+<body class="relative flex flex-col min-h-screen">
+
+  <header class="bg-gradient-to-tr from-purple-900 to-purple-700 p-4 flex justify-between items-center">
+    <a href="index.html" class="text-white font-bold text-xl">GestureBridge AI</a>
+    <nav class="space-x-6 text-white">
+      <a href="index.html" class="hover:text-purple-300">Home</a>
+      <a href="live.html" class="hover:text-purple-300">Live</a>
+      <a href="premium.html" class="hover:text-purple-300">Premium</a>
+      <a href="auth.html" class="hover:text-purple-300">Login</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto p-6">
+    <h1 class="text-4xl font-extrabold neon-text mb-12 text-center">Pricing Plans</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="glass p-6 rounded-lg text-center">
+        <h2 class="text-2xl font-semibold mb-4">Free Plan</h2>
+        <ul class="mb-6 text-left list-disc list-inside text-purple-300">
+          <li>Live gesture to text</li>
+          <li>Sentence builder</li>
+          <li>Save as .txt</li>
+        </ul>
+        <button class="btn-subscribe" disabled>Current Plan</button>
+      </div>
+      <div class="glass p-6 rounded-lg text-center">
+        <h2 class="text-2xl font-semibold mb-4">Premium Plan</h2>
+        <ul class="mb-6 text-left list-disc list-inside text-purple-300">
+          <li>Upload gesture video</li>
+          <li>AI phrase correction</li>
+          <li>Multilingual speech</li>
+          <li>Export video + text</li>
+        </ul>
+        <a href="auth.html" class="btn-subscribe">Subscribe</a>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th>Free Plan</th>
+          <th>Premium Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Live gesture to text</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Sentence builder</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Save as .txt</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Upload gesture video</td>
+          <td>❌</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>AI phrase correction</td>
+          <td>❌</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Multilingual speech</td>
+          <td>❌</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Export video + text</td>
+          <td>❌</td>
+          <td>✔️</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="text-center mt-12">
+      <p class="text-xl font-semibold">Empower your communication today</p>
+    </div>
+  </main>
+
+  <footer class="bg-gradient-to-tr from-purple-900 to-purple-700 text-white py-6 mt-16 text-center">
+    &copy; 2024 GestureBridge AI. All rights reserved.
+  </footer>
+
+</body>
+</html>
