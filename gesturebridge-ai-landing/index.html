@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GestureBridge AI - Bridge the Silence. Speak Without Sound.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Inter:wght@400;700&family=Satoshi:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom glassmorphism and neon glow styles */
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px rgba(127, 0, 255, 0.4);
+      transition: box-shadow 0.3s ease;
+    }
+    .glass:hover {
+      box-shadow: 0 0 20px rgba(225, 0, 255, 0.7);
+    }
+    .neon-text {
+      color: #e100ff;
+      text-shadow:
+        0 0 5px #e100ff,
+        0 0 10px #e100ff,
+        0 0 20px #7f00ff,
+        0 0 30px #7f00ff;
+    }
+    /* Constellation particles background */
+    body {
+      background: linear-gradient(135deg, #0a0a23, #1a0a4a);
+      font-family: 'Urbanist', 'Inter', 'Satoshi', sans-serif;
+      color: #f9f9f9;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    /* Scroll reveal placeholder */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .scroll-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="relative">
+
+  <!-- Hero Section -->
+  <section class="relative flex flex-col items-center justify-center min-h-screen px-6 text-center bg-gradient-to-br from-[#0a0a23] to-[#1a0a4a] overflow-hidden">
+    <!-- Constellation particles placeholder -->
+    <canvas id="particles" class="absolute inset-0 -z-10"></canvas>
+
+    <h1 class="text-5xl md:text-7xl font-extrabold neon-text max-w-4xl leading-tight mb-4">
+      Bridge the Silence. Speak Without Sound.
+    </h1>
+    <p class="text-xl md:text-2xl text-sky-300 mb-8 max-w-2xl">
+      Real-time sign language translation powered by AI
+    </p>
+    <div class="flex gap-6 justify-center mb-12">
+      <a href="live.html" class="glass px-8 py-3 font-semibold text-white hover:bg-purple-700 transition rounded-lg shadow-lg">
+        Try Live Demo
+      </a>
+      <a href="pricing.html" class="glass px-8 py-3 font-semibold text-purple-300 border border-purple-300 rounded-lg hover:bg-purple-800 hover:text-white transition shadow-lg">
+        Go Premium
+      </a>
+    </div>
+    <!-- Floating 3D hand or Lottie animation placeholder -->
+    <div class="w-64 h-64 mx-auto">
+      <!-- Placeholder for 3D hand animation -->
+      <img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png" alt="Gesture hand animation" class="w-full h-full object-contain opacity-80" />
+    </div>
+    <!-- Voice assistant icon pulsing in corner -->
+    <div class="absolute bottom-6 right-6">
+      <button aria-label="Voice Assistant (Coming Soon)" class="p-3 rounded-full bg-purple-700 text-white shadow-lg animate-pulse">
+        <i class="fas fa-microphone"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- Feature Grid Section -->
+  <section id="features" class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-extrabold text-center mb-12 neon-text">What Can GestureBridge Do?</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="glass p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-[0_0_15px_rgba(127,0,255,0.7)] transition-transform rounded-lg cursor-pointer">
+        <div class="text-5xl mb-4 text-purple-400">🧠</div>
+        <h3 class="text-xl font-semibold mb-2">Real-time gesture detection</h3>
+        <p class="text-sky-300">Accurate real-time detection of sign language gestures.</p>
+      </div>
+      <div class="glass p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-[0_0_15px_rgba(127,0,255,0.7)] transition-transform rounded-lg cursor-pointer">
+        <div class="text-5xl mb-4 text-purple-400">💬</div>
+        <h3 class="text-xl font-semibold mb-2">Sentence prediction</h3>
+        <p class="text-sky-300">Predicts full sentences as you sign in real-time.</p>
+      </div>
+      <div class="glass p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-[0_0_15px_rgba(127,0,255,0.7)] transition-transform rounded-lg cursor-pointer">
+        <div class="text-5xl mb-4 text-purple-400">🔊</div>
+        <h3 class="text-xl font-semibold mb-2">Voice assistant</h3>
+        <p class="text-sky-300">Converts gestures to natural-sounding speech instantly.</p>
+      </div>
+      <div class="glass p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-[0_0_15px_rgba(127,0,255,0.7)] transition-transform rounded-lg cursor-pointer">
+        <div class="text-5xl mb-4 text-purple-400">🌍</div>
+        <h3 class="text-xl font-semibold mb-2">Multilingual support</h3>
+        <p class="text-sky-300">Supports English, Urdu, Spanish, and more languages.</p>
+      </div>
+      <div class="glass p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-[0_0_15px_rgba(127,0,255,0.7)] transition-transform rounded-lg cursor-pointer">
+        <div class="text-5xl mb-4 text-purple-400">📁</div>
+        <h3 class="text-xl font-semibold mb-2">Save text as .txt</h3>
+        <p class="text-sky-300">Download your translated sentences as text files.</p>
+      </div>
+      <div class="glass p-6 flex flex-col items-center text-center hover:scale-105 hover:shadow-[0_0_15px_rgba(127,0,255,0.7)] transition-transform rounded-lg cursor-pointer">
+        <div class="text-5xl mb-4 text-purple-400">📹</div>
+        <h3 class="text-xl font-semibold mb-2">Upload video to analyze gestures</h3>
+        <p class="text-sky-300">Analyze your recorded sign language videos with AI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-tr from-purple-900 to-purple-700 text-white py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-4">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png" alt="GestureBridge Logo" class="w-10 h-10" />
+        <span class="font-bold text-xl">GestureBridge AI</span>
+      </div>
+      <div class="flex gap-6">
+        <a href="#" aria-label="Facebook" class="hover:text-purple-300"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter" class="hover:text-purple-300"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-purple-300"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn" class="hover:text-purple-300"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div>
+        <label for="language-select" class="sr-only">Select Language</label>
+        <select id="language-select" class="bg-purple-800 text-white rounded-md px-3 py-1">
+          <option value="en" selected>English</option>
+          <option value="es">Spanish</option>
+          <option value="ur">Urdu</option>
+          <option value="fr">French</option>
+        </select>
+      </div>
+    </div>
+    <div class="text-center mt-6 text-sm text-purple-300">
+      &copy; 2024 GestureBridge AI. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll to features section
+    document.querySelector('a[href="#features"]').addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector('#features').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
